@@ -1,14 +1,13 @@
 //
 //  ViewController.swift
-//  IFit
+//  IFitApp
 //
-//  Created by Sasha on 15.11.24.
+//  Created by Sasha on 20.11.24.
 //
 
 import UIKit
 
-final class LaunchViewController: UIViewController {
-
+class ViewController: UIViewController {
     let allApps = LoginedApp.getAllLoginedApps()
 
     let nameAppLabel = UILabel()
@@ -25,7 +24,7 @@ final class LaunchViewController: UIViewController {
 
 }
 
-private extension LaunchViewController {
+private extension ViewController {
 
     func setupUI() {
         configureNameAppLabel()
@@ -83,7 +82,3 @@ private extension LaunchViewController {
 
 }
 
-//#Preview {
-//    let viewController = MainViewController()
-//    viewController
-//}
