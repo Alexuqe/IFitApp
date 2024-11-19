@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let allApps = LoginedApp.getAllLoginedApps()
+//    let allApps = LoginedApp.getAllLoginedApps()
 
     let nameAppLabel = UILabel()
     let sloganLabel = UILabel()
@@ -38,7 +38,7 @@ private extension ViewController {
         nameAppLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nameAppLabel)
 
-        nameAppLabel.text = allApps.safeApp(for: .eat)?.textOnScreen[0].text.headerText
+//        nameAppLabel.text = allApps.safeApp(for: .eat)?.textOnScreen[0].text.headerText
         nameAppLabel.numberOfLines = 0
         nameAppLabel.adjustsFontSizeToFitWidth = true
         nameAppLabel.font = .systemFont(ofSize: 36, weight: .bold)
@@ -51,11 +51,11 @@ private extension ViewController {
         nameAppLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(sloganLabel)
 
-        sloganLabel.text = allApps.safeApp(for: .eat)?.textOnScreen[0].text.bodyText
+//        sloganLabel.text = allApps.safeApp(for: .eat)?.textOnScreen[0].text.bodyText
         sloganLabel.numberOfLines = 0
         sloganLabel.adjustsFontSizeToFitWidth = true
         sloganLabel.font = .systemFont(ofSize: 18)
-        sloganLabel.textColor = .colorNumber05
+//        sloganLabel.textColor = .colorNumber05
         sloganLabel.textAlignment = .center
     }
 

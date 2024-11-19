@@ -16,6 +16,8 @@
 		CEA244F22CED332E009BF412 /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244EB2CED332E009BF412 /* UIFont+extension.swift */; };
 		CEA244F82CED369A009BF412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244F72CED369A009BF412 /* ViewController.swift */; };
 		CEA244FA2CED37CE009BF412 /* extension Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244F92CED37CE009BF412 /* extension Array.swift */; };
+		CEA244FC2CED3897009BF412 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244FB2CED3897009BF412 /* Model.swift */; };
+		CEA244FE2CED38D3009BF412 /* LocalDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244FD2CED38D3009BF412 /* LocalDataBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,14 +26,14 @@
 		CEA244CF2CED31B6009BF412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA244D02CED31B6009BF412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEA244D52CED31B6009BF412 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEA244E02CED329E009BF412 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		CEA244E12CED329E009BF412 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		CEA244E82CED332E009BF412 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		CEA244E92CED332E009BF412 /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
 		CEA244EA2CED332E009BF412 /* LabelStyle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LabelStyle+extension.swift"; sourceTree = "<group>"; };
 		CEA244EB2CED332E009BF412 /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
 		CEA244F72CED369A009BF412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEA244F92CED37CE009BF412 /* extension Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension Array.swift"; sourceTree = "<group>"; };
+		CEA244FB2CED3897009BF412 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CEA244FD2CED38D3009BF412 /* LocalDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,8 @@
 		CEA244E22CED329E009BF412 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEA244E02CED329E009BF412 /* Model.swift */,
-				CEA244E12CED329E009BF412 /* DataSource.swift */,
+				CEA244FB2CED3897009BF412 /* Model.swift */,
+				CEA244FD2CED38D3009BF412 /* LocalDataBase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA244FE2CED38D3009BF412 /* LocalDataBase.swift in Sources */,
+				CEA244FC2CED3897009BF412 /* Model.swift in Sources */,
 				CEA244EE2CED332E009BF412 /* LabelStyle+extension.swift in Sources */,
 				CEA244EF2CED332E009BF412 /* Label.swift in Sources */,
 				CEA244F12CED332E009BF412 /* LabelStyle.swift in Sources */,
