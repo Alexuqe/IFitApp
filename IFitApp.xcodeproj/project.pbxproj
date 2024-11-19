@@ -6,30 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CEA244D82CED31B6009BF412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244CE2CED31B6009BF412 /* AppDelegate.swift */; };
+		CEA244D92CED31B6009BF412 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244D52CED31B6009BF412 /* SceneDelegate.swift */; };
+		CEA244DA2CED31B6009BF412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244D62CED31B6009BF412 /* ViewController.swift */; };
+		CEA244DB2CED31B6009BF412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA244CF2CED31B6009BF412 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		CEA244B52CED319F009BF412 /* IFitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IFitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA244CE2CED31B6009BF412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEA244CF2CED31B6009BF412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEA244D02CED31B6009BF412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA244D52CED31B6009BF412 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CEA244D62CED31B6009BF412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		CEA244C72CED31A2009BF412 /* Exceptions for "IFitApp" folder in "IFitApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = CEA244B42CED319F009BF412 /* IFitApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		CEA244B72CED319F009BF412 /* IFitApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				CEA244C72CED31A2009BF412 /* Exceptions for "IFitApp" folder in "IFitApp" target */,
-			);
-			path = IFitApp;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CEA244B22CED319F009BF412 /* Frameworks */ = {
@@ -45,7 +36,7 @@
 		CEA244AC2CED319F009BF412 = {
 			isa = PBXGroup;
 			children = (
-				CEA244B72CED319F009BF412 /* IFitApp */,
+				CEA244D72CED31B6009BF412 /* IFitApp */,
 				CEA244B62CED319F009BF412 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +47,26 @@
 				CEA244B52CED319F009BF412 /* IFitApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CEA244D72CED31B6009BF412 /* IFitApp */ = {
+			isa = PBXGroup;
+			children = (
+				CEA244CE2CED31B6009BF412 /* AppDelegate.swift */,
+				CEA244CF2CED31B6009BF412 /* Assets.xcassets */,
+				CEA244DF2CED31BE009BF412 /* App */,
+			);
+			path = IFitApp;
+			sourceTree = "<group>";
+		};
+		CEA244DF2CED31BE009BF412 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CEA244D52CED31B6009BF412 /* SceneDelegate.swift */,
+				CEA244D62CED31B6009BF412 /* ViewController.swift */,
+				CEA244D02CED31B6009BF412 /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +83,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				CEA244B72CED319F009BF412 /* IFitApp */,
 			);
 			name = IFitApp;
 			packageProductDependencies = (
@@ -122,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA244DB2CED31B6009BF412 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA244D82CED31B6009BF412 /* AppDelegate.swift in Sources */,
+				CEA244D92CED31B6009BF412 /* SceneDelegate.swift in Sources */,
+				CEA244DA2CED31B6009BF412 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,10 +159,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 24Q9WM75S6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = IFitApp/Info.plist;
+				INFOPLIST_FILE = IFitApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -160,9 +171,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = halushko.IFitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -175,10 +190,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 24Q9WM75S6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = IFitApp/Info.plist;
+				INFOPLIST_FILE = IFitApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -188,9 +202,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = halushko.IFitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
