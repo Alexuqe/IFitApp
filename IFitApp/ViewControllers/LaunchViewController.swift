@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LaunchViewController: UIViewController {
 //    let allApps = LoginedApp.getAllLoginedApps()
 
     let nameAppLabel = UILabel()
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
 }
 
-private extension ViewController {
+private extension LaunchViewController {
 
     func setupUI() {
         configureNameAppLabel()
