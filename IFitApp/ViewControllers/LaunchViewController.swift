@@ -8,7 +8,7 @@
 import UIKit
 
 class LaunchViewController: UIViewController {
-//    let allApps = LoginedApp.getAllLoginedApps()
+    let allApps = LoginedApp.getAllLoginedApps()
 
     let nameAppLabel = UILabel()
     let sloganLabel = UILabel()
@@ -38,11 +38,11 @@ private extension LaunchViewController {
         nameAppLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nameAppLabel)
 
-//        nameAppLabel.text = allApps.safeApp(for: .eat)?.textOnScreen[0].text.headerText
+        nameAppLabel.text = allApps.safeApp(for: .eat)?.textOnScreen[0].text.headerText
         nameAppLabel.numberOfLines = 0
         nameAppLabel.adjustsFontSizeToFitWidth = true
         nameAppLabel.font = .systemFont(ofSize: 36, weight: .bold)
-//        nameAppLabel.font = .popinsBold36()
+        nameAppLabel.font = .titleH1Bold()
         nameAppLabel.textColor = .black
         nameAppLabel.textAlignment = .center
     }
@@ -51,11 +51,11 @@ private extension LaunchViewController {
         nameAppLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(sloganLabel)
 
-//        sloganLabel.text = allApps.safeApp(for: .eat)?.textOnScreen[0].text.bodyText
+        sloganLabel.text = allApps.safeApp(for: .eat)?.textOnScreen[0].text.bodyText
         sloganLabel.numberOfLines = 0
         sloganLabel.adjustsFontSizeToFitWidth = true
         sloganLabel.font = .systemFont(ofSize: 18)
-//        sloganLabel.textColor = .colorNumber05
+        sloganLabel.textColor = .colorNumber05
         sloganLabel.textAlignment = .center
     }
 

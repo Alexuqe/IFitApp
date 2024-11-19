@@ -14,7 +14,7 @@
 		CEA244EF2CED332E009BF412 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244E82CED332E009BF412 /* Label.swift */; };
 		CEA244F12CED332E009BF412 /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244E92CED332E009BF412 /* LabelStyle.swift */; };
 		CEA244F22CED332E009BF412 /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244EB2CED332E009BF412 /* UIFont+extension.swift */; };
-		CEA244F82CED369A009BF412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244F72CED369A009BF412 /* ViewController.swift */; };
+		CEA244F82CED369A009BF412 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244F72CED369A009BF412 /* LaunchViewController.swift */; };
 		CEA244FA2CED37CE009BF412 /* extension Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244F92CED37CE009BF412 /* extension Array.swift */; };
 		CEA244FC2CED3897009BF412 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244FB2CED3897009BF412 /* Model.swift */; };
 		CEA244FE2CED38D3009BF412 /* LocalDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244FD2CED38D3009BF412 /* LocalDataBase.swift */; };
@@ -30,7 +30,7 @@
 		CEA244E92CED332E009BF412 /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
 		CEA244EA2CED332E009BF412 /* LabelStyle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LabelStyle+extension.swift"; sourceTree = "<group>"; };
 		CEA244EB2CED332E009BF412 /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
-		CEA244F72CED369A009BF412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEA244F72CED369A009BF412 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		CEA244F92CED37CE009BF412 /* extension Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension Array.swift"; sourceTree = "<group>"; };
 		CEA244FB2CED3897009BF412 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CEA244FD2CED38D3009BF412 /* LocalDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataBase.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		CEA244F42CED347C009BF412 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CEA244F72CED369A009BF412 /* ViewController.swift */,
+				CEA244F72CED369A009BF412 /* LaunchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 				CEA244F22CED332E009BF412 /* UIFont+extension.swift in Sources */,
 				CEA244FA2CED37CE009BF412 /* extension Array.swift in Sources */,
 				CEA244D82CED31B6009BF412 /* AppDelegate.swift in Sources */,
-				CEA244F82CED369A009BF412 /* ViewController.swift in Sources */,
+				CEA244F82CED369A009BF412 /* LaunchViewController.swift in Sources */,
 				CEA244D92CED31B6009BF412 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
