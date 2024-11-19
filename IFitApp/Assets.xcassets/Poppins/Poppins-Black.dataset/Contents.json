@@ -1,0 +1,13 @@
+{
+  "data" : [
+    {
+      "filename" : "Poppins-Black.ttf",
+      "idiom" : "universal",
+      "universal-type-identifier" : "font"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
