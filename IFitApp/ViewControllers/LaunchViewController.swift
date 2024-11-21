@@ -1,25 +1,35 @@
-//
-//  ViewController.swift
-//  IFitApp
-//
-//  Created by Sasha on 20.11.24.
-//
+    //
+    //  ViewController.swift
+    //  IFitApp
+    //
+    //  Created by Sasha on 20.11.24.
+    //
 
 import UIKit
 
-class LaunchViewController: UIViewController {
+
+
+final class LaunchViewController: UIViewController {
+
     let allApps = LoginedApp.getAllLoginedApps()
 
     let nameAppLabel = UILabel()
     let sloganLabel = UILabel()
-    let stackLabels = UIStackView()
 
+    let buttonGetStarted = UIButton()
+
+    let stackLabels = UIStackView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "First screen"
         setupUI()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        buttonGetStarted.addVerticalGradientLayer(topColor: .colorNumber01, bottomColor: .colorNumber02)
     }
 
 }
@@ -31,18 +41,17 @@ private extension LaunchViewController {
         configureSloganLabel()
 
         configureStackLabels()
-        constrainStackLabels()
+        configureGetStartButton()
     }
 
     func configureNameAppLabel() {
         nameAppLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nameAppLabel)
-
-        nameAppLabel.text = allApps.safeApp(for: .eat)?.textOnScreen[0].text.headerText
+//     nameAppLabel.text = allApps.safeApp(for: .eat)?.textOnScreen[0].text.headerText
+        nameAppLabel.text = allApps.safeApp(for: .login)?.nameApp
         nameAppLabel.numberOfLines = 0
         nameAppLabel.adjustsFontSizeToFitWidth = true
-        nameAppLabel.font = .systemFont(ofSize: 36, weight: .bold)
-        nameAppLabel.font = .titleH1Bold()
+        nameAppLabel.font = UIFont(name: "Poppins-Bold", size: 40)
         nameAppLabel.textColor = .black
         nameAppLabel.textAlignment = .center
     }
@@ -50,24 +59,60 @@ private extension LaunchViewController {
     func configureSloganLabel() {
         nameAppLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(sloganLabel)
-
-        sloganLabel.text = allApps.safeApp(for: .eat)?.textOnScreen[0].text.bodyText
+//        sloganLabel.text = allApps.safeApp(for: .eat)?.textOnScreen[0].text.bodyText
+        sloganLabel.text = allApps.safeApp(for: .login)?.slogan
+        sloganLabel.text = allApps.safeApp(for: .burn)?.textOnScreen[0].text.headerText
         sloganLabel.numberOfLines = 0
         sloganLabel.adjustsFontSizeToFitWidth = true
-        sloganLabel.font = .systemFont(ofSize: 18)
+        sloganLabel.font = UIFont(name: "Poppins-Regular", size: 18)
         sloganLabel.textColor = .colorNumber05
         sloganLabel.textAlignment = .center
     }
 
     func configureStackLabels() {
         stackLabels.axis = .vertical
-        stackLabels.distribution = .fillEqually
+        stackLabels.distribution = .fillProportionally
         stackLabels.spacing = 15
         stackLabels.addArrangedSubview(nameAppLabel)
         stackLabels.addArrangedSubview(sloganLabel)
         view.addSubview(stackLabels)
+        constrainStackLabels()
     }
 
+    func configureGetStartButton() {
+        var configurButton = UIButton.Configuration.plain()
+        configurButton.cornerStyle = .capsule
+        configurButton.baseForegroundColor = .white
+        configurButton.titleAlignment = .center
+        configurButton.contentInsets = NSDirectionalEdgeInsets(
+            top: 10,
+            leading: 20,
+            bottom: 10,
+            trailing: 20
+        )
+
+        let title = "Get Started"
+        let font = UIFont(name: "Poppins-Bold", size: 16)
+        var atributedString = AttributedString(title)
+        atributedString.font = font
+
+        configurButton.attributedTitle = atributedString
+        buttonGetStarted.configuration = configurButton
+
+        buttonGetStarted.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(buttonGetStarted)
+        constrainButton()
+
+        buttonGetStarted.addTarget(self, action: #selector(tapOnGetStartedButton), for: .touchUpInside)
+    }
+
+    @objc func tapOnGetStartedButton() {
+        let viewController = TrackYouViewController()
+        viewController.typeTraine = allApps
+        viewController.screenIndex = 1
+
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 
     func constrainStackLabels() {
         stackLabels.translatesAutoresizingMaskIntoConstraints = false
@@ -79,6 +124,20 @@ private extension LaunchViewController {
         ])
     }
 
+    func constrainButton() {
+        NSLayoutConstraint.activate(
+            [buttonGetStarted.heightAnchor.constraint(equalToConstant: 60),
+             buttonGetStarted.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
+             buttonGetStarted.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+             buttonGetStarted.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30)
+            ]
+        )
+    }
+
 
 }
 
+#Preview {
+    let viewController = LaunchViewController()
+    viewController
+}
