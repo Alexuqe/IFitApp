@@ -1,9 +1,9 @@
-//
-//  Model.swift
-//  IFitApp
-//
-//  Created by Sasha on 20.11.24.
-//
+    //
+    //  Model.swift
+    //  IFitApp
+    //
+    //  Created by Sasha on 20.11.24.
+    //
 import Foundation
 
 
@@ -29,7 +29,6 @@ struct LoginedApp {
         self.textOnScreen = ScreenData.getArray().filter { $0.type == typeTraine }
     }
 }
-
 
 struct ScreenData {
     let type: TypeTraine
@@ -66,6 +65,24 @@ struct TextOnAScreen {
 }
 
 
+
+
+
+
+struct User {
+    let id = UUID()
+    let login: String
+    let password: String
+    let person: Person
+
+    static func getUser() -> User {
+        User(
+            login: "User",
+            password: "1234",
+            person: Person.getPerson()
+        )
+    }
+}
 
 struct Person {
     let name: String

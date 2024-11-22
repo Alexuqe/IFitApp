@@ -108,10 +108,9 @@ private extension LaunchViewController {
   @objc func tapOnGetStartedButton() {
       let viewController = TrackYouViewController()
     viewController.typeTraine = allApps
-    viewController.screenIndex = 1
-//    print("Passing data to GetBurnViewController: \(allApps)")
+    viewController.screenIndex = 0
 
-    navigationController?.pushViewController(viewController, animated: true)
+      navigationController?.pushViewController(viewController, animated: true)
   }
 
   func constrainStackLabels() {

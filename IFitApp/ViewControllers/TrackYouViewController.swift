@@ -23,7 +23,7 @@ final class TrackYouViewController: UIViewController {
 
     // MARK: - Properties
     var typeTraine: [LoginedApp]!
-    var screenIndex = 1
+    var screenIndex = 0
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -66,7 +66,7 @@ final class TrackYouViewController: UIViewController {
     }
 
     private func updateProgressView() {
-        let totalScreens = TypeTraine.allCases.count
+        let totalScreens = TypeTraine.allCases.count - 1
         let totalProgress = Float(screenIndex) / Float(totalScreens)
         progressView.setProgress(CGFloat(totalProgress), animated: true)
     }
