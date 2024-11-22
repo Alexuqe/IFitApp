@@ -9,7 +9,6 @@ import UIKit
 
 final class TrackYouViewController: UIViewController {
 
-
     //MARK: IB Outlets
     var trackYouGoalImage = UIImageView()
     let progressView = CircularProgressView()
@@ -88,7 +87,7 @@ extension TrackYouViewController {
         var configure = UIButton.Configuration.plain()
         configure.cornerStyle = .capsule
         configure.titleAlignment = .center
-        configure.image = UIImage(systemName: "arrow.right")
+        configure.image = UIImage(named: "iconlyLightArrowRight2")
         configure.baseForegroundColor = .white
         nextScreenButton.configuration = configure
 
@@ -274,6 +273,7 @@ extension TrackYouViewController {
         }) { _ in
                 // After the animation, remove the old stack view and update references
             self.stackViewFirstScreen.removeFromSuperview()
+            print("stackViewFirstScreen removed from superview")
             self.stackViewFirstScreen = self.stackViewSecondScreen
             self.trackYouGoalImage = newImageView
             self.headerLabel = newHeaderLabel
@@ -283,6 +283,11 @@ extension TrackYouViewController {
 
             // Update progress view
         updateProgressView()
+    }
+
+
+    func printMessage(function: String = #function) {
+        print("\(title ?? ""): \(function)")
     }
 
 

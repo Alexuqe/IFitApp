@@ -14,7 +14,7 @@ final class LoginViewController: UIViewController {
     let subtitleLabel = UILabel()
     let welcomLabel = UILabel()
 
-    let userNameTextField = UITextField()
+    let emailTextField = UITextField()
     let userPasswordTextField = UITextField()
 
     let loginButton = UIButton()
@@ -40,19 +40,36 @@ final class LoginViewController: UIViewController {
 extension LoginViewController: UITextFieldDelegate {
 
     func setupUI() {
-        configureNameTextField()
+        configureEmailTextField()
         configurePasswordTextField()
         configureTextFieldStackView()
 
         configureTextFieldStackView()
     }
 
-    func configureNameTextField() {
-        userNameTextField.placeholder = "User Name"
-//        userNameTextField.backgroundColor = .gray
-        userNameTextField.borderStyle = .roundedRect
-        userNameTextField.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(userNameTextField)
+    func configureEmailTextField() {
+        emailTextField.placeholder = "Email"
+        emailTextField.font = UIFont(name: "Poppins-Regular", size: 18)
+        emailTextField.adjustsFontSizeToFitWidth = true
+        emailTextField.minimumFontSize = 12
+        emailTextField.sizingRule = .typographic
+        emailTextField.textAlignment = .left
+        emailTextField.autocapitalizationType = .none
+        emailTextField.keyboardType = .emailAddress
+
+
+        let leftPadding = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: emailTextField.bounds.height + 15))
+        emailTextField.leftView = leftPadding
+        emailTextField.leftViewMode = .always
+
+        emailTextField.layer.borderWidth = 0.8
+        emailTextField.layer.cornerRadius = 5
+        emailTextField.layer.borderColor = UIColor.colorNumber06.cgColor
+
+        emailTextField.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(emailTextField)
+        
+        emailTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
 
     func configurePasswordTextField() {
@@ -67,7 +84,7 @@ extension LoginViewController: UITextFieldDelegate {
         textFieldStackView.alignment = .fill
         textFieldStackView.distribution = .fillProportionally
 
-        textFieldStackView.addArrangedSubview(userNameTextField)
+        textFieldStackView.addArrangedSubview(emailTextField)
         textFieldStackView.addArrangedSubview(userPasswordTextField)
 
         textFieldStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -93,9 +110,9 @@ extension LoginViewController: UITextFieldDelegate {
 
 }
 
-#Preview {
-    let viewController = LoginViewController()
-    viewController
-}
+//#Preview {
+//    let viewController = LoginViewController()
+//    viewController
+//}
 
 

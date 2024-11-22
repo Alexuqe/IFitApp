@@ -19,6 +19,9 @@ final class LaunchViewController: UIViewController {
 
   let stackLabels = UIStackView()
 
+    deinit {
+            print("LauchVC is being deallocated")
+        }
   //MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -110,7 +113,11 @@ private extension LaunchViewController {
     viewController.typeTraine = allApps
     viewController.screenIndex = 0
 
-      navigationController?.pushViewController(viewController, animated: true)
+      if let navigationController = self.navigationController {
+                  navigationController.setViewControllers([viewController], animated: true)
+              }
+      self.dismiss(animated: false, completion: nil)
+
   }
 
   func constrainStackLabels() {
