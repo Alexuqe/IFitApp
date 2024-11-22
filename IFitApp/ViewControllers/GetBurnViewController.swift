@@ -12,21 +12,16 @@ class GetBurnViewController: UIViewController {
     var typeTraine: [LoginedApp]!
     var screenIndex = 1
 
+    let imageView = UIImageView()
+    let circularProgressView = UIProgressView()
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

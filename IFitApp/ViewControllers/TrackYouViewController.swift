@@ -15,14 +15,19 @@ final class TrackYouViewController: UIViewController {
     let screenProgressView = UIProgressView()
     let progressView = CircularProgressView()
     let nextScreenButton = UIButton()
+    let headerLabel = UILabel()
+    let secondLabel = UILabel()
+
+    let stackViewLabels = UIStackView()
 
     var screenIndex = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Two screen"
+        navigationItem.hidesBackButton = true
         setupUI()
+
     }
 
     override func viewDidLayoutSubviews() {
@@ -36,8 +41,6 @@ final class TrackYouViewController: UIViewController {
 
 }
 
-
-
 private extension TrackYouViewController {
 
     func setupUI() {
@@ -47,6 +50,10 @@ private extension TrackYouViewController {
         configureTrackYouImageView()
         configureNextScreenButton()
         configureProgressView()
+        configureheaderLabel()
+        configureSecondLAble()
+
+        configureStackViewLabels()
 
         setupConstraitButton()
     }
@@ -66,15 +73,6 @@ private extension TrackYouViewController {
     }
 
     func configureProgressView() {
-//        screenProgressView.progressViewStyle = .default
-//        screenProgressView.translatesAutoresizingMaskIntoConstraints = false
-//        screenProgressView.backgroundColor = .colorNumber04
-//        screenProgressView.progress = 10
-//        screenProgressView.trackTintColor = .gray
-//        screenProgressView.progressTintColor = .red
-//        view.addSubview(screenProgressView)
-//        setupConstraitProgressView()
-
         progressView.translatesAutoresizingMaskIntoConstraints = false
         setupConstraitProgressView()
     }
@@ -95,45 +93,82 @@ private extension TrackYouViewController {
         eatView.typeTraine = typeTraine
         eatView.screenIndex = 2
         navigationController?.pushViewController(eatView, animated: true)
+    }
 
+    func configureheaderLabel() {
+        headerLabel.text = typeTraine?.safeApp(for: .track)?.textOnScreen.first?.text.headerText ?? "Track You Goal"
+        headerLabel.font = UIFont(name: "Poppins-Bold", size: 24)
+        headerLabel.textColor = .colorNumber04
+        headerLabel.adjustsFontSizeToFitWidth = true
+        headerLabel.numberOfLines = 0
+        headerLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(headerLabel)
+    }
+
+    func configureSecondLAble() {
+        secondLabel.text = typeTraine?.safeApp(for: .track)?.textOnScreen.first?.text.bodyText ?? "HSIDAIDI"
+        secondLabel.font = UIFont(name: "Poppins-Regular", size: 14)
+        secondLabel.textColor = .colorNumber05
+        secondLabel.adjustsFontSizeToFitWidth = true
+        secondLabel.numberOfLines = 0
+        secondLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(secondLabel)
+    }
+
+    func configureStackViewLabels() {
+        stackViewLabels.axis = .vertical
+        stackViewLabels.distribution = .fillProportionally
+        stackViewLabels.alignment = .fill
+        stackViewLabels.spacing = 15
+        stackViewLabels.addArrangedSubview(headerLabel)
+        stackViewLabels.addArrangedSubview(secondLabel)
+
+        stackViewLabels.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stackViewLabels)
+        setupConstraintStackViewLabel()
     }
 
     func setupConstraintImageView() {
-        NSLayoutConstraint.activate(
-            [
+        NSLayoutConstraint.activate([
                 trackYouGoalImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
                 trackYouGoalImage.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
                 trackYouGoalImage.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
                 trackYouGoalImage.heightAnchor.constraint(equalToConstant: 410)
-            ]
-        )
+            ])
     }
 
     func setupConstraitProgressView() {
-        NSLayoutConstraint.activate(
-            [
+        NSLayoutConstraint.activate([
                 progressView.widthAnchor.constraint(equalToConstant: 80),
                 progressView.heightAnchor.constraint(equalToConstant: 80),
                 progressView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
                 progressView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30)
-            ]
-        )
+            ])
     }
 
     func setupConstraitButton() {
-        NSLayoutConstraint.activate(
-            [
+        NSLayoutConstraint.activate([
                 nextScreenButton.centerYAnchor.constraint(equalTo: progressView.centerYAnchor, constant: 0),
                 nextScreenButton.centerXAnchor.constraint(equalTo: progressView.centerXAnchor, constant: 0),
                 nextScreenButton.heightAnchor.constraint(equalToConstant: 70),
                 nextScreenButton.widthAnchor.constraint(equalToConstant: 70)
-            ]
-        )
+            ])
+    }
+
+    func setupConstraintStackViewLabel() {
+        NSLayoutConstraint.activate([
+            stackViewLabels.topAnchor.constraint(equalTo: trackYouGoalImage.bottomAnchor, constant: 64),
+            stackViewLabels.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+            stackViewLabels.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
+            
+        ])
     }
 
 
 
 }
+
+
 #Preview {
     let viewController = TrackYouViewController()
     viewController

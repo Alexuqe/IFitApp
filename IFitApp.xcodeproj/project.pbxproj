@@ -41,7 +41,7 @@
 		CEB619E62CEF8E7000AB176B /* TrackYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB619E52CEF8E7000AB176B /* TrackYouViewController.swift */; };
 		CEB619E82CEFA9C000AB176B /* extension UIView + shadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB619E72CEFA9C000AB176B /* extension UIView + shadowLayer.swift */; };
 		CEB61A3A2CEFD1D000AB176B /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB61A392CEFD1D000AB176B /* CircularProgressView.swift */; };
-		CEB61A3C2CEFE83700AB176B /* EatWellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB61A3B2CEFE83700AB176B /* EatWellViewController.swift */; };
+		CEB61A3C2CEFE83700AB176B /* GetBurnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB61A3B2CEFE83700AB176B /* GetBurnViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +81,7 @@
 		CEB619E52CEF8E7000AB176B /* TrackYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackYouViewController.swift; sourceTree = "<group>"; };
 		CEB619E72CEFA9C000AB176B /* extension UIView + shadowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension UIView + shadowLayer.swift"; sourceTree = "<group>"; };
 		CEB61A392CEFD1D000AB176B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
-		CEB61A3B2CEFE83700AB176B /* EatWellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatWellViewController.swift; sourceTree = "<group>"; };
+		CEB61A3B2CEFE83700AB176B /* GetBurnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBurnViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +205,7 @@
 				CEA244F72CED369A009BF412 /* LaunchViewController.swift */,
 				CEB619E52CEF8E7000AB176B /* TrackYouViewController.swift */,
 				CEB61A392CEFD1D000AB176B /* CircularProgressView.swift */,
-				CEB61A3B2CEFE83700AB176B /* EatWellViewController.swift */,
+				CEB61A3B2CEFE83700AB176B /* GetBurnViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -303,7 +303,7 @@
 			files = (
 				CEB619E62CEF8E7000AB176B /* TrackYouViewController.swift in Sources */,
 				CEA244FE2CED38D3009BF412 /* LocalDataBase.swift in Sources */,
-				CEB61A3C2CEFE83700AB176B /* EatWellViewController.swift in Sources */,
+				CEB61A3C2CEFE83700AB176B /* GetBurnViewController.swift in Sources */,
 				CEA244FC2CED3897009BF412 /* Model.swift in Sources */,
 				CEA244EE2CED332E009BF412 /* LabelStyle+extension.swift in Sources */,
 				CEA244EF2CED332E009BF412 /* Label.swift in Sources */,

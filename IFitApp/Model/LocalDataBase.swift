@@ -14,7 +14,7 @@ final class LocalDatabase {
     let trainingDescriptions: [TypeTraine: [String: String]] = [
         .track: [
             "headerText": "Track Your Personal Goals",
-            "bodyText": "Customize and monitor your fitness journey with precision and motivation"
+            "bodyText": "Don't worry if you have trouble determining your goals, We can help you determine your goals and track your goals"
         ],
         .burn: [
             "headerText": "Burn and Transform",
