@@ -91,7 +91,7 @@ private extension TrackYouViewController {
     }
 
     @objc func tapButton() {
-        let eatView = EatWellViewController()
+        let eatView = GetBurnViewController()
         eatView.typeTraine = typeTraine
         eatView.screenIndex = 2
         navigationController?.pushViewController(eatView, animated: true)

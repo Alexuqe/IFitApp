@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EatWellViewController: UIViewController {
+class GetBurnViewController: UIViewController {
 
     var typeTraine: [LoginedApp]!
     var screenIndex = 1
