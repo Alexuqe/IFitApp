@@ -75,7 +75,7 @@ final class CircularProgressView: UIView {
 }
 
 #Preview {
-    let viewController = GetBurnViewController()
+    let viewController = LoginViewController()
     viewController
 }
 

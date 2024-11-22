@@ -45,7 +45,7 @@ private extension LaunchViewController {
   }
 
   func configureNameAppLabel() {
-    nameAppLabel.text = allApps.safeApp(for: .login)?.nameApp
+      nameAppLabel.text = allApps.first?.nameApp
     nameAppLabel.numberOfLines = 0
     nameAppLabel.adjustsFontSizeToFitWidth = true
     nameAppLabel.font = UIFont(name: "Poppins-Bold", size: 40)
@@ -57,8 +57,7 @@ private extension LaunchViewController {
   }
 
   func configureSloganLabel() {
-    sloganLabel.text = allApps.safeApp(for: .login)?.slogan
-    sloganLabel.text = allApps.safeApp(for: .burn)?.textOnScreen[0].text.headerText
+      sloganLabel.text = allApps.first?.slogan
     sloganLabel.numberOfLines = 0
     sloganLabel.adjustsFontSizeToFitWidth = true
     sloganLabel.font = UIFont(name: "Poppins-Regular", size: 18)

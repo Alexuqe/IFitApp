@@ -7,14 +7,15 @@
 
 import UIKit
 
-class GetBurnViewController: UIViewController {
+class LoginViewController: UIViewController {
 
-    var typeTraine: [LoginedApp]!
-    var screenIndex = 1
-
-    let imageView = UIImageView()
-    let circularProgressView = UIProgressView()
     
+    let loginButton = UIButton()
+    let forgotPasswordButton = UIButton()
+    let forgotUserNameButton = UIButton()
+
+    let userNameTextField = UITextField()
+    let userPasswordTextField = UITextField()
 
     override func viewDidLoad() {
         super.viewDidLoad()

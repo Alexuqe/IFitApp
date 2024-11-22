@@ -11,7 +11,7 @@ struct LoginedApp {
     let nameApp: String
     let id = UUID()
     let textOnScreen: [ScreenData]
-    let typeTraine: TypeTraine
+    let typesOfTraine: [TypeTraine]
     let slogan: String
 
     static func getAllLoginedApps() -> [LoginedApp] {
@@ -23,7 +23,7 @@ struct LoginedApp {
 
         self.nameApp = localDB.trainingDescriptions[.login]?["headerText"] ?? "IFit"
         self.slogan = localDB.trainingDescriptions[.login]?["bodyText"] ?? "Everybody"
-        self.typeTraine = typeTraine
+        self.typesOfTraine = [typeTraine]
 
             // Фильтруем ScreenData для конкретного типа тренировки
         self.textOnScreen = ScreenData.getArray().filter { $0.type == typeTraine }
@@ -41,12 +41,14 @@ struct ScreenData {
         return TypeTraine.allCases.map { trainType in
             let headerText = localDB.trainingDescriptions[trainType]?["headerText"] ?? ""
             let bodyText = localDB.trainingDescriptions[trainType]?["bodyText"] ?? ""
+            let image = localDB.trainingDescriptions[trainType]?["imageName"] ?? ""
 
             return ScreenData(
                 type: trainType,
                 text: TextOnAScreen(
                     headerText: headerText,
-                    bodyText: bodyText
+                    bodyText: bodyText,
+                    image: image
                 )
             )
         }
@@ -60,6 +62,7 @@ enum TypeTraine: CaseIterable {
 struct TextOnAScreen {
     let headerText: String
     let bodyText: String
+    let image: String
 }
 
 
