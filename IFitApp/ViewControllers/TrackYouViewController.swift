@@ -280,14 +280,8 @@ extension TrackYouViewController {
             self.secondLabel = newSecondLabel
             self.stackViewLabels = newStackViewLabels
         }
-
             // Update progress view
         updateProgressView()
-    }
-
-
-    func printMessage(function: String = #function) {
-        print("\(title ?? ""): \(function)")
     }
 
 

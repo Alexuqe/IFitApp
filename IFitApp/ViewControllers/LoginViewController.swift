@@ -30,7 +30,6 @@ final class LoginViewController: UIViewController {
         navigationItem.hidesBackButton = true
 
         setupUI()
-            // Do any additional setup after loading the view.
     }
 
 
@@ -44,7 +43,6 @@ extension LoginViewController: UITextFieldDelegate {
         configurePasswordTextField()
         configureTextFieldStackView()
 
-        configureTextFieldStackView()
     }
 
     func configureEmailTextField() {
@@ -58,17 +56,27 @@ extension LoginViewController: UITextFieldDelegate {
         emailTextField.keyboardType = .emailAddress
 
 
-        let leftPadding = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: emailTextField.bounds.height + 15))
-        emailTextField.leftView = leftPadding
-        emailTextField.leftViewMode = .always
+//        let leftPadding = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: emailTextField.bounds.height))
 
+        let imageTF = UIImageView()
+        imageTF.image = UIImage(named: "iconlyLightMessage")
+        imageTF.tintColor = .colorNumber05
+        imageTF.contentMode = .center
+        imageTF.translatesAutoresizingMaskIntoConstraints = false
+
+
+//        emailTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: emailTextField.frame.width, height: emailTextField.frame.height))
+        emailTextField.leftView = imageTF
+//        emailTextField.leftView?.backgroundColor = .red
+        emailTextField.leftView?.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        emailTextField.leftViewMode = .always
         emailTextField.layer.borderWidth = 0.8
         emailTextField.layer.cornerRadius = 5
         emailTextField.layer.borderColor = UIColor.colorNumber06.cgColor
 
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(emailTextField)
-        
+
         emailTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
 
@@ -110,9 +118,9 @@ extension LoginViewController: UITextFieldDelegate {
 
 }
 
-//#Preview {
-//    let viewController = LoginViewController()
-//    viewController
-//}
+#Preview {
+    let viewController = LoginViewController()
+    viewController
+}
 
 
