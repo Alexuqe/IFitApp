@@ -48,10 +48,10 @@ private extension LaunchViewController {
   }
 
   func configureNameAppLabel() {
-      nameAppLabel.text = allApps.first?.nameApp
+    nameAppLabel.text = allApps.first?.nameApp
     nameAppLabel.numberOfLines = 0
     nameAppLabel.adjustsFontSizeToFitWidth = true
-    nameAppLabel.font = UIFont(name: "Poppins-Bold", size: 40)
+    nameAppLabel.font = UIFont().fontBoldStyle(size: 40)
     nameAppLabel.textColor = .black
     nameAppLabel.textAlignment = .center
 
@@ -60,10 +60,10 @@ private extension LaunchViewController {
   }
 
   func configureSloganLabel() {
-      sloganLabel.text = allApps.first?.slogan
+    sloganLabel.text = allApps.first?.slogan
     sloganLabel.numberOfLines = 0
     sloganLabel.adjustsFontSizeToFitWidth = true
-    sloganLabel.font = UIFont(name: "Poppins-Regular", size: 18)
+    sloganLabel.font = UIFont().fontRegularStyle(size: 18)
     sloganLabel.textColor = .colorNumber05
     sloganLabel.textAlignment = .center
 
@@ -109,15 +109,15 @@ private extension LaunchViewController {
   }
 
   @objc func tapOnGetStartedButton() {
-      let viewController = TrackYouViewController()
+    let viewController = TrackYouViewController()
     viewController.typeTraine = allApps
     viewController.screenIndex = 0
 
       if let navigationController = self.navigationController {
                   navigationController.setViewControllers([viewController], animated: true)
               }
-      self.dismiss(animated: false, completion: nil)
 
+      self.dismiss(animated: false, completion: nil)
   }
 
   func constrainStackLabels() {
@@ -145,8 +145,8 @@ private extension LaunchViewController {
 }
 
 
-//
-//#Preview {
-//    let viewController = LaunchViewController()
-//    viewController
-//}
+
+#Preview {
+    let viewController = LaunchViewController()
+    viewController
+}

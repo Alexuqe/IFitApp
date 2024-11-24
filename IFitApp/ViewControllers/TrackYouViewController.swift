@@ -99,6 +99,7 @@ extension TrackYouViewController {
         headerLabel.text =
         typeTraine?.safeApp(for: [.track])!.textOnScreen.first?.text.headerText ?? "Track You Goal"
         headerLabel.font = UIFont(name: "Poppins-Bold", size: 24)
+        headerLabel.font = UIFont().fontBoldStyle(size: 24)
         headerLabel.textColor = .colorNumber04
         headerLabel.adjustsFontSizeToFitWidth = true
         headerLabel.numberOfLines = 0
@@ -109,7 +110,7 @@ extension TrackYouViewController {
 
     func configureSecondLAble() {
         secondLabel.text = typeTraine?.safeApp(for: [.track])?.textOnScreen.first?.text.bodyText
-        secondLabel.font = UIFont(name: "Poppins-Regular", size: 14)
+        secondLabel.font = UIFont().fontRegularStyle(size: 14)
         secondLabel.textColor = .colorNumber05
         secondLabel.adjustsFontSizeToFitWidth = true
         secondLabel.numberOfLines = 0
@@ -154,7 +155,7 @@ extension TrackYouViewController {
                 equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
             trackYouGoalImage.trailingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            trackYouGoalImage.heightAnchor.constraint(equalToConstant: 410),
+            trackYouGoalImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5)
         ])
     }
 
@@ -218,14 +219,14 @@ extension TrackYouViewController {
 
         let newHeaderLabel = UILabel()
         newHeaderLabel.text = newHeaderText
-        newHeaderLabel.font = UIFont(name: "Poppins-Bold", size: 24)
+        newHeaderLabel.font = UIFont().fontBoldStyle(size: 24)
         newHeaderLabel.textColor = .colorNumber04
         newHeaderLabel.adjustsFontSizeToFitWidth = true
         newHeaderLabel.numberOfLines = 0
 
         let newSecondLabel = UILabel()
         newSecondLabel.text = newBodyText
-        newSecondLabel.font = UIFont(name: "Poppins-Regular", size: 14)
+        newSecondLabel.font = UIFont().fontRegularStyle(size: 14)
         newSecondLabel.textColor = .colorNumber05
         newSecondLabel.adjustsFontSizeToFitWidth = true
         newSecondLabel.numberOfLines = 0
@@ -246,7 +247,7 @@ extension TrackYouViewController {
         stackViewSecondScreen.axis = .vertical
         stackViewSecondScreen.distribution = .fill
         stackViewSecondScreen.alignment = .fill
-        stackViewSecondScreen.spacing = 63
+        stackViewSecondScreen.spacing = 100
         stackViewSecondScreen.translatesAutoresizingMaskIntoConstraints = false
 
         view.addSubview(stackViewSecondScreen)
@@ -256,9 +257,10 @@ extension TrackYouViewController {
             stackViewSecondScreen.topAnchor.constraint(equalTo: view.topAnchor),
             stackViewSecondScreen.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             stackViewSecondScreen.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            newImageView.heightAnchor.constraint(equalToConstant: 410),
+            newImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
             newImageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
             newImageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -0),
+            newStackViewLabels.topAnchor.constraint(equalTo: newImageView.bottomAnchor, constant: 64),
             newStackViewLabels.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
             newStackViewLabels.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30)
         ])

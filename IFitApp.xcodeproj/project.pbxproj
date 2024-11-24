@@ -38,6 +38,7 @@
 		CEA244FA2CED37CE009BF412 /* extension Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244F92CED37CE009BF412 /* extension Array.swift */; };
 		CEA244FC2CED3897009BF412 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244FB2CED3897009BF412 /* Model.swift */; };
 		CEA244FE2CED38D3009BF412 /* LocalDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA244FD2CED38D3009BF412 /* LocalDataBase.swift */; };
+		CEA298D52CF36D8E001058F7 /* extension Font styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA298D42CF36D8E001058F7 /* extension Font styles.swift */; };
 		CEB619E62CEF8E7000AB176B /* TrackYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB619E52CEF8E7000AB176B /* TrackYouViewController.swift */; };
 		CEB619E82CEFA9C000AB176B /* extension UIView + shadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB619E72CEFA9C000AB176B /* extension UIView + shadowLayer.swift */; };
 		CEB61A3A2CEFD1D000AB176B /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB61A392CEFD1D000AB176B /* CircularProgressView.swift */; };
@@ -78,6 +79,7 @@
 		CEA244F92CED37CE009BF412 /* extension Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension Array.swift"; sourceTree = "<group>"; };
 		CEA244FB2CED3897009BF412 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CEA244FD2CED38D3009BF412 /* LocalDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataBase.swift; sourceTree = "<group>"; };
+		CEA298D42CF36D8E001058F7 /* extension Font styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension Font styles.swift"; sourceTree = "<group>"; };
 		CEB619E52CEF8E7000AB176B /* TrackYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackYouViewController.swift; sourceTree = "<group>"; };
 		CEB619E72CEFA9C000AB176B /* extension UIView + shadowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension UIView + shadowLayer.swift"; sourceTree = "<group>"; };
 		CEB61A392CEFD1D000AB176B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				CEA244F92CED37CE009BF412 /* extension Array.swift */,
 				CE0B8CAC2CEE5FD000428902 /* extension UIView.swift */,
 				CEB619E72CEFA9C000AB176B /* extension UIView + shadowLayer.swift */,
+				CEA298D42CF36D8E001058F7 /* extension Font styles.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				CEA244D82CED31B6009BF412 /* AppDelegate.swift in Sources */,
 				CEA244F82CED369A009BF412 /* LaunchViewController.swift in Sources */,
 				CEA244D92CED31B6009BF412 /* SceneDelegate.swift in Sources */,
+				CEA298D52CF36D8E001058F7 /* extension Font styles.swift in Sources */,
 				CE0B8CAD2CEE5FD000428902 /* extension UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
