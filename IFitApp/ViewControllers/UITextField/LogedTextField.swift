@@ -31,6 +31,7 @@ class LogedTextField: UITextField {
         self.sizingRule = .typographic
         self.textAlignment = .left
         self.autocapitalizationType = .none
+        self.autocorrectionType = .no
         self.keyboardType = .emailAddress
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -56,8 +57,12 @@ class LogedTextField: UITextField {
         rightImageTf.translatesAutoresizingMaskIntoConstraints = false
         rightImageTf.isUserInteractionEnabled = true
 
-        self.rightView = rightImageTf
-        self.rightViewMode = .whileEditing
+        rightView = rightImageTf
+
+        rightViewMode = .whileEditing
+
+
+
         self.rightView?.widthAnchor.constraint(equalToConstant: 50).isActive = true
 
         let delete = UITapGestureRecognizer(target: self, action: #selector(deleteText))

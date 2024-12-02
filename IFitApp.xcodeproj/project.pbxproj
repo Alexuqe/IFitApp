@@ -43,8 +43,10 @@
 		CEB619E82CEFA9C000AB176B /* extension UIView + shadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB619E72CEFA9C000AB176B /* extension UIView + shadowLayer.swift */; };
 		CEB61A3A2CEFD1D000AB176B /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB61A392CEFD1D000AB176B /* CircularProgressView.swift */; };
 		CEB61A3C2CEFE83700AB176B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB61A3B2CEFE83700AB176B /* LoginViewController.swift */; };
+		CEDB77092CF787F6005646A6 /* class LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB77082CF787F6005646A6 /* class LineView.swift */; };
 		CEF8C2462CF6289E00D4D107 /* LogedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C2452CF6289E00D4D107 /* LogedTextField.swift */; };
 		CEF8C2492CF6502600D4D107 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C2482CF6502600D4D107 /* PasswordTextField.swift */; };
+		CEF8C24D2CF6712C00D4D107 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C24C2CF6712C00D4D107 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,8 +88,10 @@
 		CEB619E72CEFA9C000AB176B /* extension UIView + shadowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension UIView + shadowLayer.swift"; sourceTree = "<group>"; };
 		CEB61A392CEFD1D000AB176B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		CEB61A3B2CEFE83700AB176B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CEDB77082CF787F6005646A6 /* class LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "class LineView.swift"; sourceTree = "<group>"; };
 		CEF8C2452CF6289E00D4D107 /* LogedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogedTextField.swift; sourceTree = "<group>"; };
 		CEF8C2482CF6502600D4D107 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		CEF8C24C2CF6712C00D4D107 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 				CE0B8CAC2CEE5FD000428902 /* extension UIView.swift */,
 				CEB619E72CEFA9C000AB176B /* extension UIView + shadowLayer.swift */,
 				CEA298D42CF36D8E001058F7 /* extension Font styles.swift */,
+				CEDB77082CF787F6005646A6 /* class LineView.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				CEB619E52CEF8E7000AB176B /* TrackYouViewController.swift */,
 				CEB61A392CEFD1D000AB176B /* CircularProgressView.swift */,
 				CEB61A3B2CEFE83700AB176B /* LoginViewController.swift */,
+				CEF8C24C2CF6712C00D4D107 /* HomeViewController.swift */,
 				CEF8C2472CF628A400D4D107 /* UITextField */,
 			);
 			path = ViewControllers;
@@ -320,6 +326,7 @@
 			files = (
 				CEB619E62CEF8E7000AB176B /* TrackYouViewController.swift in Sources */,
 				CEA244FE2CED38D3009BF412 /* LocalDataBase.swift in Sources */,
+				CEF8C24D2CF6712C00D4D107 /* HomeViewController.swift in Sources */,
 				CEF8C2492CF6502600D4D107 /* PasswordTextField.swift in Sources */,
 				CEB61A3C2CEFE83700AB176B /* LoginViewController.swift in Sources */,
 				CEA244FC2CED3897009BF412 /* Model.swift in Sources */,
@@ -333,6 +340,7 @@
 				CEA244D82CED31B6009BF412 /* AppDelegate.swift in Sources */,
 				CEA244F82CED369A009BF412 /* LaunchViewController.swift in Sources */,
 				CEF8C2462CF6289E00D4D107 /* LogedTextField.swift in Sources */,
+				CEDB77092CF787F6005646A6 /* class LineView.swift in Sources */,
 				CEA244D92CED31B6009BF412 /* SceneDelegate.swift in Sources */,
 				CEA298D52CF36D8E001058F7 /* extension Font styles.swift in Sources */,
 				CE0B8CAD2CEE5FD000428902 /* extension UIView.swift in Sources */,

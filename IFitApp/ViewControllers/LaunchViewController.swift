@@ -94,7 +94,7 @@ private extension LaunchViewController {
     )
 
     let title = "Get Started"
-    let font = UIFont(name: "Poppins-Bold", size: 16)
+      let font = UIFont().fontBoldStyle(size: 16)
 
     var atributedString = AttributedString(title)
     atributedString.font = font

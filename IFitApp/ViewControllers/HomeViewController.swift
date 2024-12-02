@@ -9,9 +9,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    var user: User!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .red
+        title = "3 Screen"
         // Do any additional setup after loading the view.
     }
     

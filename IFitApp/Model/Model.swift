@@ -77,8 +77,8 @@ struct User {
 
     static func getUser() -> User {
         User(
-            login: "User",
-            password: "1234",
+            login: "user@mail.ru",
+            password: "Tel214383411!",
             person: Person.getPerson()
         )
     }

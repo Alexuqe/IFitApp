@@ -29,6 +29,7 @@ class PasswordTextField: UITextField {
         self.minimumFontSize = 12
         self.textAlignment = .left
         self.autocapitalizationType = .none
+        self.autocorrectionType = .no
         self.adjustsFontSizeToFitWidth = true
 
         self.layer.borderWidth = 0.8
